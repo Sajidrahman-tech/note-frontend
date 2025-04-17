@@ -10,7 +10,7 @@ export default function NotesApp() {
   const [expandedNoteId, setExpandedNoteId] = useState(null);
   const userId = "sajid123";
 
-  const apiBase = `https://hpthgr8n00.execute-api.us-east-1.amazonaws.com/prod/notes`;
+  const apiBase = process.env.REACT_APP_API_BASE;
 
   const fetchNotes = async () => {
     try {
